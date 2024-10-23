@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Stopwatch</title>
+
+    </head>
+
+    <body>
+
+        <div>
+            <div id="stopwatch">00:00:00.0</div>
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <script>
+            let startTime, updatedTime, difference, running = false;
+            let interval;
+
+            const stopwatchDisplay = document.getElementById('stopwatch');
+
+            function startTimer() {
+                if (!running) {
+                    startTime = new Date().getTime() - (difference || 0);
+                    interval = setInterval(updateTime, 100);
+                    running = true;
+                }
+            }
+
+            function stopTimer() {
+                clearInterval(interval);
+                running = false;
+            }
+
+            function resetTimer() {
+                clearInterval(interval);
+                running = false;
+                difference = 0;
+                stopwatchDisplay.innerHTML = "00:00:00.0";
+            }
+
+            function updateTime() {
+                updatedTime = new Date().getTime();
+                difference = updatedTime - startTime;
+
+                let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                let milliseconds = Math.floor((difference % 1000) / 100);
+
+                stopwatchDisplay.innerHTML =
+                    (hours < 10 ? "0" + hours : hours) + ":" +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                    (seconds < 10 ? "0" + seconds : seconds) + "." +
+                    milliseconds;
+            }
+
+            document.getElementById('startBtn').onclick = startTimer;
+            document.getElementById('stopBtn').onclick = stopTimer;
+            document.getElementById('resetBtn').onclick = resetTimer;
+        </script>
+        
+            
+            
+        <div id="stopwatch"> stopwatch</div>
+        <button id="startBtn">startTime</button>
+        <button id="stopBtn">stopTime</button>
+        <button id="resetBtn">resetTime</button>
+        
+            
+
+    </body>
+
+    </html>
+</body>
+
+</html>

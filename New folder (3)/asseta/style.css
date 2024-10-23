@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+/* .header{
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+
+
+}
+
+.nav-list ul{
+    display: flex;
+    gap: 40px;
+    padding: 20px 20px;
+    list-style: none;
+} */
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav-list ul{
+    display: block;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header .nav-list ul li a{
+    color: white;
+    text-decoration: none;
+}
+.header .nav-list ul li::first-letter{
+    color: blue;
+}
+.header .nav-list ul li a:hover{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 2px 2px white;
+}
+.header .nav-list #bar{
+    display: none;
+}
+.header .nav-list #list{
+    display: none;
+}
+
+.imj{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+   
+   
+}
+.bady{
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    
+}
+
+.imj {
+    /* ... */
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+@media screen and (max-width:600px) {
+    .header .nav-list #head{
+        display: none;
+    }
+    .header .nav-list #list{
+        display: none;
+    }
+    .header .nav-list #bar{
+        font-size: 30px;
+        display: block;
+    }
+    body{
+        background-color: red;
+    }
+    .header .nav-list  ul{
+        position: fixed;
+        background-color: black;
+       width: 200px;
+        right: 0px;
+    }
+
+    .header .nav-list  ul li{
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .box-section2{
+        /* flex-wrap: wrap; */
+        flex-direction: column; 
+        gap: 10px;
+    }
+    h1{
+        color: blue;
+    }
+}
+
+@media screen and (min-width:601px) {
+    .header .nav-list #list {
+        display: none !important;
+    }
+}
+
+
