@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+
+/* .header{
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+
+
+}
+    
+
+.nav-list ul{
+    display: flex;
+    gap: 40px;
+    padding: 20px 20px;
+    list-style: none;
+} */
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav-list ul{
+    display: block;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header .nav-list ul li a{
+    color: white;
+    text-decoration: none;
+}
+.header .nav-list ul li::first-letter{
+    color: blue;
+}
+.header .nav-list ul li a:hover{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 2px 2px white;
+}
+.header .nav-list #bar{
+    display: none;
+}
+.header .nav-list #list{
+    display: none;
+}
+@media screen and (max-width:600px) {
+    .header .nav-list #head{
+        display: none;
+    }
+    .header .nav-list #list{
+        display: none;
+    }
+    .header .nav-list #bar{
+        font-size: 30px;
+        display: block;
+    }
+    body{
+        background-color: red;
+    }
+    .header .nav-list  ul{
+        position: fixed;
+        background-color: black;
+       width: 200px;
+        right: 0px;
+    }
+
+    .header .nav-list  ul li{
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .box-section2{
+        /* flex-wrap: wrap; */
+        flex-direction: column; 
+        gap: 10px;
+    }
+    h1{
+        color: blue;
+    }
+}
+
+.header002{
+    display: flex;
+    /* gap: 80px; */
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    
+}
+
+.header002 .navbar .nav-list{
+    display: flex;
+    gap: 80px;
+    list-style: none;
+    
+    
+}
+
+.header002 .navbar .nav-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main .best{
+    /* display: flex; */
+    background-color: black;
+}
+
+/* .header002 .navbar .nav-list li #bar009{
+    background-color: #55E6A5;
+    padding: 10px;
+} */
+
+.header002 .navbar .nav-list li [href="/"]{
+    background-color: #55E6A5;
+    color: black;
+    padding: 15px;
+    transition: all 0.9s ease;
+    
+}
+
+.header002 .navbar .nav-list li [href="/"]:hover{
+    background-color: white;
+}
+
+.best{
+    gap: 150px;
+    justify-content: space-around;
+    margin-top: 5px;
+    padding: 100px;
+    
+
+}
+
+.best-text{
+    display: flex;
+    gap: 200px;
+    justify-content: space-around;
+}
+
+.best-text .be{
+    font-size: 100px;
+    color: white
+
+}
+
+.best-text p  {
+    color: beige;
+    font-size: 100px;
+}
+
+ .devel{
+    font-size: 160px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 40px;
+    top: 495px;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main .image{
+    position: relative;
+    right: 100px;
+    /* bottom: 70px; */
+    top: 90px;
+    
+}
+
+
+
+
